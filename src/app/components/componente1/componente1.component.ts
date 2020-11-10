@@ -2,13 +2,23 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'componente1',
-    template: `
-        <h1>hola soy titulo</h1>
-        <p>hola parrafo</p>
-    `
+    templateUrl:'./componente1.component.html'
+    
 })
 export class Componente1{
-    construstor(){
+
+    public title: string;
+    public commentary: string;
+    public year: number;
+
+    constructor(){
+        this.title = "hola";
+        this.commentary = "comentario33rrr";
+        this.year = 2020;
+
+        console.log("componente1 cargado");
+        console.log(this.year);
         console.log("componente1 cargado");
     }
 }
+
