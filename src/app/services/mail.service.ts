@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
 import { HttpClient } from '@angular/common/http';
+import { MailResponse } from '../interfaces/mailInterface';
 
 @Injectable({
   	providedIn: 'root'
@@ -16,10 +17,10 @@ export class MailService {
 
   	mail_url: string = "https://ssacrisss.herokuapp.com/mail";
   
-  	respuesta(emisor: string, asunto: string, mensaje: string): Observable<any>{
-		return this._http.post<string>(`${this.mail_url}`, {
+  	public envio(emisor: string, asunto: string, mensaje: string): Observable<MailResponse>{
+		return this._http.post<MailResponse>(`${this.mail_url}`, {
 			emisor: emisor,
-			ausnto: asunto,
+			asunto: asunto,
 			mensaje: mensaje
 		})
 

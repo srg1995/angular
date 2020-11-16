@@ -8,6 +8,8 @@ import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MailComponent } from './components/mail/mail.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EntradasSalidasComponent } from './components/entradas-salidas/entradas-salidas.component';
+import { UserComponent } from './components/user/user.component';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     FilmsComponent,
     MenuComponent,
     FooterComponent,
-    MailComponent
+    MailComponent,
+    EntradasSalidasComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,

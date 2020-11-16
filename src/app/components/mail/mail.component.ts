@@ -24,7 +24,7 @@ export class MailComponent implements OnInit {
     const emisor = (document.querySelector("#emisor") as HTMLInputElement).value;
     const asunto = (document.querySelector("#asunto") as HTMLInputElement).value;
     const mensaje = (document.querySelector("#mensaje") as HTMLInputElement).value;
-    this._mail.respuesta(emisor,asunto,mensaje).subscribe(response =>{
+    this._mail.envio(emisor,asunto,mensaje).subscribe(response =>{
       console.log(response);
     })
   }
