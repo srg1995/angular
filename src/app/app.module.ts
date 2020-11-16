@@ -10,6 +10,8 @@ import { MailComponent } from './components/mail/mail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EntradasSalidasComponent } from './components/entradas-salidas/entradas-salidas.component';
 import { UserComponent } from './components/user/user.component';
+import { FormulariosComponent } from './components/formularios/formularios.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,11 +23,13 @@ import { UserComponent } from './components/user/user.component';
     FooterComponent,
     MailComponent,
     EntradasSalidasComponent,
-    UserComponent
+    UserComponent,
+    FormulariosComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

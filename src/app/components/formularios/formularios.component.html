@@ -1,0 +1,12 @@
+<form [formGroup]="signupForm" (ngSubmit)="enviar(signupForm.value)">
+    <label for="emisor">Emisor</label>
+    <input formControlName="emisor" type="text">
+    <br><br>
+    <label for="asunto">Asunto</label>
+    <input formControlName="asunto" type="text">
+    <br><br>
+    <label for="mensaje">Mensaje</label>
+    <input formControlName="mensaje" type="text">
+    <br><br>
+    <button [disabled]="signupForm.invalid" type="submit">Registro</button>
+</form>
