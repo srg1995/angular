@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, Host, Input } from '@angular/core';
+import { AppComponent } from 'src/app/app.component';
 
 @Component({
   selector: 'app-user',
@@ -9,11 +10,12 @@ export class UserComponent  {
 
   @Input("data") user: any 
 
-  @Output() borrar = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(
+    @Host() private _padre: AppComponent
+  ) {  }
 
   borrarUsuario(id:number){
-    this.borrar.emit(id)
+    this._padre.usuarios = this._padre.usuarios.filter(usuario => usuario.id != id)
   }
 }
