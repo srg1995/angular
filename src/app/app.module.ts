@@ -12,6 +12,7 @@ import { EntradasSalidasComponent } from './components/entradas-salidas/entradas
 import { UserComponent } from './components/user/user.component';
 import { FormulariosComponent } from './components/formularios/formularios.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Directiva1Directive } from './directives/directiva1.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MailComponent,
     EntradasSalidasComponent,
     UserComponent,
-    FormulariosComponent
+    FormulariosComponent,
+    Directiva1Directive
   ],
   imports: [
     BrowserModule,
