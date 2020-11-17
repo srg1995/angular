@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MailService } from 'src/app/services/mail.service';
+import { MailService } from '@services/mail.service';
 
 @Component({
   selector: 'app-formularios',

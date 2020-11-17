@@ -1,5 +1,5 @@
 import { Component, Host, Input } from '@angular/core';
-import { AppComponent } from 'src/app/app.component';
+import { AppComponent } from 'app/app.component';
 
 @Component({
   selector: 'app-user',
