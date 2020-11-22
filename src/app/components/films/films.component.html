@@ -1,9 +1,15 @@
-<h1>{{title}}</h1>
-<p>{{author}}</p>
+<app-menu></app-menu>
 
-<p>{{genre}}</p>
+<div class="pelicula">
+    <h1><b>Titulo: </b>{{title}}</h1>
+    <p><b>Autor: </b>{{author}}</p>
+    
+    <p><b>Genero: </b>{{genre}}</p>
+    
+    <p><b>Lanzamiento: </b>{{launch}}</p>
+    
+    <p><b>Visitas: </b>{{visits}}</p>
+    <button (click)="getVisits()" class="btn btn-primary">Generador de visitas</button>
+</div>
 
-<p>{{launch}}</p>
-
-<p>{{visits}}</p>
-<button (click)="getVisits()">vistaste la pag</button>
+<app-footer></app-footer>

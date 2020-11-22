@@ -14,10 +14,10 @@ export class FilmsComponent implements OnInit {
   public visits: number;
 
   constructor() { 
-    this.title = "titulo pelicula";
-    this.author = "autor";
-    this.genre = "genero";
-    this.launch = 2018;
+    this.title = "Viuda Negra";
+    this.author = "Marvel";
+    this.genre = "Accion";
+    this.launch = 2020;
     this.visits = 0;
   }
 

@@ -1,0 +1,10 @@
+.pelicula{
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+}
+
+h1{
+    font-size: 40px;
+    color: rgb(36, 95, 122);
+}

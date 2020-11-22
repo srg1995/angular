@@ -3,11 +3,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MailService } from '@services/mail.service';
 
 @Component({
-  selector: 'app-formularios',
-  templateUrl: './formularios.component.html',
-  styleUrls: ['./formularios.component.css']
+  selector: 'app-forms',
+  templateUrl: './forms.component.html',
+  styleUrls: ['./forms.component.css']
 })
-export class FormulariosComponent implements OnInit {
+export class FormsComponent implements OnInit {
 
   signupForm: FormGroup
   constructor(
@@ -25,7 +25,7 @@ export class FormulariosComponent implements OnInit {
   }
 
 
-  enviar(values){
+  send(values){
     this._smail.envio(values.emisor, values.asunto, values.mensaje).subscribe(response =>{
       console.log(response);
     })

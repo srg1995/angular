@@ -1,0 +1,22 @@
+<app-menu></app-menu>
+<form [formGroup]="signupForm" (ngSubmit)="send(signupForm.value)">
+    <div class="form-group">
+        <label for="emisor">Emisor</label>
+        <input formControlName="emisor" class="form-control" type="text">
+        <div class="error-validacion" *ngIf="signupForm.get('emisor').hasError('required') && signupForm.get('emisor').hasError('email') && signupForm.get('emisor').touched">OBLIGATORIO</div>
+    </div>
+    <div class="form-group">
+        <label for="asunto">Asunto</label>
+        <input formControlName="asunto" class="form-control" type="text">
+        <div class="error-validacion" *ngIf="signupForm.get('asunto').hasError('required') && signupForm.get('asunto').touched">OBLIGATORIO</div>
+    </div>
+    <div class="form-group">
+        <label for="mensaje">Mensaje</label>
+        <input formControlName="mensaje" class="form-control" type="text">
+        <div class="error-validacion" *ngIf="signupForm.get('mensaje').hasError('required') && signupForm.get('mensaje').touched">OBLIGATORIO</div>
+    </div>
+
+    <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
+<app-footer></app-footer>

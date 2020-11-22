@@ -1,0 +1,17 @@
+tr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70px;
+    border: none;
+    margin: 0 auto;
+    position: relative;
+}
+th{
+    width: 100%;
+    border: none;
+}
+td{
+    border: none;
+}
