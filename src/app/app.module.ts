@@ -12,8 +12,20 @@ import { Directiva1Directive } from './directives/directiva1.directive';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsComponent } from '@components/forms/forms.component';
 import { DirectivesComponent } from './components/directives/directives.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { IndexComponent } from './components/index/index.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 const rutas: Routes = [
 
+  {
+    path: '',
+    pathMatch: 'full',
+    redirectTo: 'index'
+  },
+  {
+    path: 'index',
+    component: IndexComponent
+  },
   {
     path: 'film',
     component: FilmsComponent
@@ -37,13 +49,16 @@ const rutas: Routes = [
     UserComponent,
     FormsComponent,
     Directiva1Directive,
-    DirectivesComponent
+    DirectivesComponent,
+    IndexComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(rutas)
+    RouterModule.forRoot(rutas),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
