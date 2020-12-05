@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+
+<mat-paginator [length]="comments.length" [pageSize]="page_size" [pageSizeOptions]="page_size_options" (page)="handlePage($event)">
+</mat-paginator>
+
+<ul class="comentarios">
+    <li class="comentario" *ngFor="let comment of comments | pagination:page_size:page_number">
+        <ul>
+            <li *ngFor="let prop of comment | keyvalue">
+                <b>{{ prop.key }}:</b> {{ prop.value }}
+            </li>
+        </ul>
+        <br>
+        <br>
+    </li>
+
+</ul>
+
+
+<app-footer></app-footer>
