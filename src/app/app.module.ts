@@ -15,6 +15,8 @@ import { DirectivesComponent } from './components/directives/directives.componen
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './components/index/index.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { PaginationPipe } from './pipes/pagination.pipe';
+import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 const rutas: Routes = [
 
   {
@@ -37,7 +39,11 @@ const rutas: Routes = [
   {
     path: 'directives',
     component: DirectivesComponent
-  }
+  },
+  {
+    path: 'pagination',
+    component: PaginationComponent
+  }  
 ]
 
 @NgModule({
@@ -51,16 +57,18 @@ const rutas: Routes = [
     Directiva1Directive,
     DirectivesComponent,
     IndexComponent,
-    PaginationComponent
+    PaginationComponent,
+    PaginationPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ReactiveFormsModule,
     RouterModule.forRoot(rutas),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatPaginatorModule
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent],
   schemas: [
     CUSTOM_ELEMENTS_SCHEMA,

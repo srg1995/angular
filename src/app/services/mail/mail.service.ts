@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 
 import { HttpClient } from '@angular/common/http';
-import { MailResponse } from '../interfaces/mailInterface';
+import { MailResponse } from '../../interfaces/mailInterface';
 
 @Injectable({
   	providedIn: 'root'
