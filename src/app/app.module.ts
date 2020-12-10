@@ -43,7 +43,7 @@ const rutas: Routes = [
   {
     path: 'pagination',
     component: PaginationComponent
-  }  
+  }
 ]
 
 @NgModule({
@@ -58,7 +58,7 @@ const rutas: Routes = [
     DirectivesComponent,
     IndexComponent,
     PaginationComponent,
-    PaginationPipe
+    PaginationPipe,
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,6 @@ export class PaginationComponent implements OnInit {
   ) {
   }
 
-
-
   comments: Comment[] = [];
   page_size: number = 9;
   page_number:number = 1;

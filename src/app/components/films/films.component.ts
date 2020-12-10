@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-films',
   templateUrl: './films.component.html',
   styleUrls: ['./films.component.css']
 })
-export class FilmsComponent implements OnInit {
+export class FilmsComponent {
 
   public title: string;
   public author: string;
@@ -19,9 +19,6 @@ export class FilmsComponent implements OnInit {
     this.genre = "Accion";
     this.launch = 2020;
     this.visits = 0;
-  }
-
-  ngOnInit(): void {
   }
 
   public getVisits(){

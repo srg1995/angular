@@ -6,10 +6,9 @@ import { AppComponent } from 'app/app.component';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
-export class UserComponent  {
+export class UserComponent {
 
-  @Input("data") user: any 
-
+  @Input("data") user: any
 
   constructor(
     @Host() private _padre: AppComponent
