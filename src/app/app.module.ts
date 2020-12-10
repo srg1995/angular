@@ -17,6 +17,7 @@ import { IndexComponent } from './components/index/index.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationPipe } from './pipes/pagination.pipe';
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
+import { MatButtonModule } from '@angular/material/button';
 const rutas: Routes = [
 
   {
@@ -66,7 +67,8 @@ const rutas: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(rutas),
     BrowserAnimationsModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatButtonModule
   ],
   providers: [ ],
   bootstrap: [AppComponent],

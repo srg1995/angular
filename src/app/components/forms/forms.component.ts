@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MailService } from '@services/mail/mail.service';
 
@@ -7,7 +7,7 @@ import { MailService } from '@services/mail/mail.service';
 	templateUrl: './forms.component.html',
 	styleUrls: ['./forms.component.css']
 })
-export class FormsComponent implements OnInit {
+export class FormsComponent implements AfterViewInit {
 
 	mailForm: FormGroup
 	constructor(
@@ -30,10 +30,10 @@ export class FormsComponent implements OnInit {
 		})
 	}
 
-	@ViewChild('btn_envio', {static:true}) button:ElementRef;
+	@ViewChild('emisor', {static:true}) button:ElementRef;
 
-	ngOnInit(): void {
-		this.button.nativeElement.innerHTML = "Enviar"
+	ngAfterViewInit(): void {
+		this.button.nativeElement.innerHTML = "Emisor"
 	}
 
 

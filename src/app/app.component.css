@@ -1,0 +1,9 @@
+:host::ng-deep.mat-focus-indicator.mat-primary:disabled {
+    background-color: rgba(199, 199, 199, 0.541);
+    border: solid 1px #2c2c2c;
+    color: #2c2c2c;
+}
+
+:host::ng-deep.mat-focus-indicator.mat-primary {
+    border: solid 1px #3f51b5;
+}

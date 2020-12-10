@@ -1,7 +1,7 @@
 <app-menu></app-menu>
 <form [formGroup]="mailForm" (ngSubmit)="send(mailForm.value)">
     <div class="form-group">
-        <label for="emisor">Emisor</label>
+        <label #emisor for="emisor"></label>
         <input formControlName="emisor" class="form-control" type="text">
         <div class="error-validacion" *ngIf="mailForm.get('emisor').hasError('required') && mailForm.get('emisor').hasError('email') && mailForm.get('emisor').touched">OBLIGATORIO</div>
     </div>
@@ -16,7 +16,7 @@
         <div class="error-validacion" *ngIf="mailForm.get('mensaje').hasError('required') && mailForm.get('mensaje').touched">OBLIGATORIO</div>
     </div>
 
-    <button #btn_envio [disabled]="mailForm.invalid" type="submit" class="btn btn-primary"></button>
+    <button mat-stroked-button color="primary" [disabled]="mailForm.invalid" type="submit">Enviar</button>
 </form>
 
 <app-footer></app-footer>
