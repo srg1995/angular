@@ -1,22 +1,22 @@
 <app-menu></app-menu>
-<form [formGroup]="signupForm" (ngSubmit)="send(signupForm.value)">
+<form [formGroup]="mailForm" (ngSubmit)="send(mailForm.value)">
     <div class="form-group">
         <label for="emisor">Emisor</label>
         <input formControlName="emisor" class="form-control" type="text">
-        <div class="error-validacion" *ngIf="signupForm.get('emisor').hasError('required') && signupForm.get('emisor').hasError('email') && signupForm.get('emisor').touched">OBLIGATORIO</div>
+        <div class="error-validacion" *ngIf="mailForm.get('emisor').hasError('required') && mailForm.get('emisor').hasError('email') && mailForm.get('emisor').touched">OBLIGATORIO</div>
     </div>
     <div class="form-group">
         <label for="asunto">Asunto</label>
         <input formControlName="asunto" class="form-control" type="text">
-        <div class="error-validacion" *ngIf="signupForm.get('asunto').hasError('required') && signupForm.get('asunto').touched">OBLIGATORIO</div>
+        <div class="error-validacion" *ngIf="mailForm.get('asunto').hasError('required') && mailForm.get('asunto').touched">OBLIGATORIO</div>
     </div>
     <div class="form-group">
         <label for="mensaje">Mensaje</label>
         <input formControlName="mensaje" class="form-control" type="text">
-        <div class="error-validacion" *ngIf="signupForm.get('mensaje').hasError('required') && signupForm.get('mensaje').touched">OBLIGATORIO</div>
+        <div class="error-validacion" *ngIf="mailForm.get('mensaje').hasError('required') && mailForm.get('mensaje').touched">OBLIGATORIO</div>
     </div>
 
-    <button [disabled]="signupForm.invalid" type="submit" class="btn btn-primary">Enviar</button>
+    <button #btn_envio [disabled]="mailForm.invalid" type="submit" class="btn btn-primary"></button>
 </form>
 
 <app-footer></app-footer>
