@@ -18,6 +18,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { PaginationPipe } from './pipes/pagination.pipe';
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
 const rutas: Routes = [
 
   {
@@ -68,7 +69,8 @@ const rutas: Routes = [
     RouterModule.forRoot(rutas),
     BrowserAnimationsModule,
     MatPaginatorModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [ ],
   bootstrap: [AppComponent],

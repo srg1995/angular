@@ -3,13 +3,17 @@
 <div class="pelicula">
     <h1><b>Titulo: </b>{{title}}</h1>
     <p><b>Autor: </b>{{author}}</p>
-    
+
     <p><b>Genero: </b>{{genre}}</p>
-    
+
     <p><b>Lanzamiento: </b>{{launch}}</p>
-    
-    <p><b>Visitas: </b>{{visits}}</p>
-    <button (click)="getVisits()" class="btn btn-primary">Generador de visitas</button>
+
+    <p><b>likes: </b>{{visits}}</p>
+    Generador de likes:
+
+    <button (click)="getVisits()" mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
 </div>
 
 <app-footer></app-footer>
