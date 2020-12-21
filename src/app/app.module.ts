@@ -19,6 +19,9 @@ import { PaginationPipe } from './pipes/pagination.pipe';
 import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
+import { ArticlesComponent } from './components/articles/articles.component';
+import { MatCardModule } from '@angular/material/card';
+import { ArticleComponent } from '@components/article/article.component';
 const rutas: Routes = [
 
   {
@@ -45,6 +48,10 @@ const rutas: Routes = [
   {
     path: 'pagination',
     component: PaginationComponent
+  },
+  {
+    path: 'inheritance',
+    component: ArticlesComponent
   }
 ]
 
@@ -61,6 +68,8 @@ const rutas: Routes = [
     IndexComponent,
     PaginationComponent,
     PaginationPipe,
+    ArticleComponent,
+    ArticlesComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,7 +79,8 @@ const rutas: Routes = [
     BrowserAnimationsModule,
     MatPaginatorModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [ ],
   bootstrap: [AppComponent],

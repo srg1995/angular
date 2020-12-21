@@ -1,0 +1,13 @@
+<h1>LISTADO DE ARTICULOS</h1>
+<h4>Utilizando Proyeccion de Contenidos</h4>
+<div class="articles-container">
+    <app-article *ngFor="let article of articles">
+
+        <div class="title">{{ article.title }}</div>
+        <div class="id">{{ article.id }}</div>
+        <div class="body">
+            {{ article.body }}
+        </div>
+
+    </app-article>
+</div>
