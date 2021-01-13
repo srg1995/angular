@@ -22,6 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { MatCardModule } from '@angular/material/card';
 import { ArticleComponent } from '@components/article/article.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 const rutas: Routes = [
 
   {
@@ -80,7 +82,8 @@ const rutas: Routes = [
     MatPaginatorModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatProgressSpinnerModule
   ],
   providers: [ ],
   bootstrap: [AppComponent],

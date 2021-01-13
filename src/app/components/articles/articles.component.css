@@ -46,3 +46,14 @@ app-article {
     padding: 10px;
     text-align: justify;
 }
+
+.cargando {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+:host::ng-deep .mat-spinner {
+    display: flex;
+    justify-content: center;
+}
