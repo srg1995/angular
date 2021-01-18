@@ -16,14 +16,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { IndexComponent } from './components/index/index.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { PaginationPipe } from './pipes/pagination.pipe';
-import {MatPaginatorIntl, MatPaginatorModule} from '@angular/material/paginator';
+import { MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { ArticlesComponent } from './components/articles/articles.component';
 import { MatCardModule } from '@angular/material/card';
 import { ArticleComponent } from '@components/article/article.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-
+import { LoginComponent } from './components/login/login.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { AdminComponent } from './components/admin/admin.component';
+import { AuthGuard } from './guards/auth.guard';
 const rutas: Routes = [
 
   {
@@ -49,11 +53,20 @@ const rutas: Routes = [
   },
   {
     path: 'pagination',
-    component: PaginationComponent
+    component: PaginationComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'inheritance',
     component: ArticlesComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
+  },
+  {
+    path: 'admin',
+    component: AdminComponent
   }
 ]
 
@@ -72,6 +85,8 @@ const rutas: Routes = [
     PaginationPipe,
     ArticleComponent,
     ArticlesComponent,
+    LoginComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
@@ -83,7 +98,9 @@ const rutas: Routes = [
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatFormFieldModule,
+    MatInputModule,
   ],
   providers: [ ],
   bootstrap: [AppComponent],

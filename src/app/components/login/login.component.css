@@ -1,0 +1,10 @@
+form {
+    position: relative;
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+mat-form-field {
+    color: rgb(54, 71, 163);
+}

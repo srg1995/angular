@@ -1,0 +1,19 @@
+<app-menu></app-menu>
+
+<form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input formControlName="name" matInput placeholder="Nombre">
+        <mat-icon matSuffix> person_pin</mat-icon>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+        <mat-label>Contrase&ntilde;</mat-label>
+        <input formControlName="passwd" type="password" matInput placeholder="Contrase&ntilde;a">
+        <mat-icon matSuffix>https</mat-icon>
+    </mat-form-field>
+    <br>
+    <button mat-stroked-button color="primary" [disabled]="loginForm.invalid" type="submit">Login</button>
+</form>
+<app-footer></app-footer>

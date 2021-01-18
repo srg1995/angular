@@ -1,0 +1,15 @@
+<p>Pagina de administradores</p>
+
+<div *ngIf="!this._logueado.logueado; else registrado">
+    <button (click)="logarse()">login</button>
+</div>
+
+<ng-template #registrado>
+    ESTAS LOGUEADO ENHORABUENA<br> Paginas de administrador:
+    <ul>
+        <li>
+            <a class="nav-link" routerLinkActive="active" routerLink="/pagination">Paginación</a>
+        </li>
+    </ul>
+    <button (click)="logout()">Cerrar Sesion</button>
+</ng-template>
